@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * When even you click image from phone's camera then your phone stores some information too with image.
+ * When you click image from phone's camera then your phone stores some information too with image.
  * So this project is all about how to get those information.
  *
  * Please have a look on getImageDetail() method.
@@ -194,6 +194,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
+
 
     /**
      * Method to convert degrees, minutes, seconds to Decimal coordinates
