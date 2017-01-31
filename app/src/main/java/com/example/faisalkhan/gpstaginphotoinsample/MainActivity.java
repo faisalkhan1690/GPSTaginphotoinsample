@@ -157,23 +157,22 @@ public class MainActivity extends AppCompatActivity {
     private void getImageDetail(String file) {
         try {
             ExifInterface exifInterface = new ExifInterface(file);
+            String imageLength = exifInterface.getAttribute(ExifInterface.TAG_IMAGE_LENGTH);
+            String tagwWidth = exifInterface.getAttribute(ExifInterface.TAG_IMAGE_WIDTH);
+            String tagDateTime = exifInterface.getAttribute(ExifInterface.TAG_DATETIME);
+            String tagMake = exifInterface.getAttribute(ExifInterface.TAG_MAKE);
+            String tagModel = exifInterface.getAttribute(ExifInterface.TAG_MODEL);
+            String tagOperation = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
+            String tagWhiteBalance = exifInterface.getAttribute(ExifInterface.TAG_WHITE_BALANCE);
+            String tagFocalLength = exifInterface.getAttribute(ExifInterface.TAG_FOCAL_LENGTH);
+            String tagFlash = exifInterface.getAttribute(ExifInterface.TAG_FLASH);
 
-//            String imageLength = exifInterface.getAttribute(ExifInterface.TAG_IMAGE_LENGTH);
-//            String tagwWidth = exifInterface.getAttribute(ExifInterface.TAG_IMAGE_WIDTH);
-//            String tagDateTime = exifInterface.getAttribute(ExifInterface.TAG_DATETIME);
-//            String tagMake = exifInterface.getAttribute(ExifInterface.TAG_MAKE);
-//            String tagModel = exifInterface.getAttribute(ExifInterface.TAG_MODEL);
-//            String tagOperation = exifInterface.getAttribute(ExifInterface.TAG_ORIENTATION);
-//            String tagWhiteBalance = exifInterface.getAttribute(ExifInterface.TAG_WHITE_BALANCE);
-//            String tagFocalLength = exifInterface.getAttribute(ExifInterface.TAG_FOCAL_LENGTH);
-//            String tagFlash = exifInterface.getAttribute(ExifInterface.TAG_FLASH);
-
-//            String tagGpsTimeStamp = exifInterface.getAttribute(ExifInterface.TAG_GPS_DATESTAMP);
+            String tagGpsTimeStamp = exifInterface.getAttribute(ExifInterface.TAG_GPS_DATESTAMP);
             String tagGpsLatitude = exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE);
-//            String tagGpsLatituteRef = exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE_REF);
+            String tagGpsLatituteRef = exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE_REF);
             String tagGpsLongitude = exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE);
-//            String tagGpsLongitudeRef = exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF);
-//            String tagGpsProcessingMethod = exifInterface.getAttribute(ExifInterface.TAG_GPS_PROCESSING_METHOD);
+            String tagGpsLongitudeRef = exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF);
+            String tagGpsProcessingMethod = exifInterface.getAttribute(ExifInterface.TAG_GPS_PROCESSING_METHOD);
 
             Geocoder geocoder = new Geocoder(this, Locale.getDefault());
             try{
@@ -185,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 tvLocation.setText(cityName+" "+stateName+""+countryName);
             }catch (NumberFormatException | NullPointerException | IOException e){
                 e.printStackTrace();
-                tvLocation.setText("Please check you internet and gps.");
+                tvLocation.setText("Please check your internet and gps.");
             }
 
 
