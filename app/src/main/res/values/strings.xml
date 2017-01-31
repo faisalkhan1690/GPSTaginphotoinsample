@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GPS Tag in photo in sample</string>
+    <string name="image_location">Image Location :-</string>
+    <string name="image_tag">Image with GPS tag</string>
+</resources>
