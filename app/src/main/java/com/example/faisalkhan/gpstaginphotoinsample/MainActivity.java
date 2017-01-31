@@ -30,7 +30,7 @@ import java.util.Locale;
  *
  * Please have a look on getImageDetail() method.
  *
- * For more detail please look in to class ExifInterface. Using this class all these things are posible.
+ * For more detail please look in to class ExifInterface. Using this class all these things are possible.
  *
  * For more details :- https://developer.android.com/reference/android/media/ExifInterface.html
  *
