@@ -1,6 +1,6 @@
-# GPS Tag in Images 
+# GPS Tag in Images
 --------------
-When even you click image from phone's camera then your phone stores some information too with image.
+When you click image from phone's camera then your phone stores some information too with image.
 So this project is all about how to get those information specially <b>Location<b>.
 
  Please have a look on getImageDetail() method in the project.
