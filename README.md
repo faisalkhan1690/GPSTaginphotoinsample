@@ -28,7 +28,15 @@ So this project is all about how to get those information specially <b>Location<
     String tagGpsLongitudeRef = exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF);
     String tagGpsProcessingMethod = exifInterface.getAttribute(ExifInterface.TAG_GPS_PROCESSING_METHOD);
  ```
+Pre-requisites
+--------------
 
+- Android SDK v23
+- Android Build Tools v23.0.2
+
+
+Screenshots
+--------------
 ![screenshot_2017-01-31-22-28-50](https://cloud.githubusercontent.com/assets/7554816/22475924/a1a43dfa-e806-11e6-8211-30a8c3ce9305.png)
 ![screenshot_2017-01-31-22-30-15](https://cloud.githubusercontent.com/assets/7554816/22475925/a1aba1b2-e806-11e6-8367-c69d37180441.png)
 
